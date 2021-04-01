@@ -36,7 +36,7 @@ babel可以吧高级代码翻译为低级代码(ES5)
 3. to_es5.ts -> 使用 `@babel/preset-env` 编译code 打印结果
 
 ### 收集依赖(import)
-dep_1.ts -> 读取 `project_1` 项目并收集项目中的依赖(import)
-dep_2.ts -> 读取 `project_2` 项目并递归收集项目中的依赖(import)
-dep_3.ts -> 读取 `project_3` 项目并递归收集项目中的依赖(import)，因为项目中有循环依赖会造成死循环
-dep_4.ts -> 读取 `project_4` 项目并递归收集项目中的依赖(import)，通过检测key来避免重复收集依赖造成的死循环
+1. dep_1.ts -> 读取 `project_1` 项目并收集项目中的依赖(import)
+2. dep_2.ts -> 读取 `project_2` 项目并递归收集项目中的依赖(import)
+3. dep_3.ts -> 读取 `project_3` 项目并递归收集项目中的依赖(import)，因为项目中有循环依赖会造成死循环
+4. dep_4.ts -> 读取 `project_4` 项目并递归收集项目中的依赖(import)，通过检测key来避免重复收集依赖造成的死循环
