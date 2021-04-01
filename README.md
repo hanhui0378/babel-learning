@@ -30,11 +30,12 @@ babel可以吧高级代码翻译为低级代码(ES5)
 @babel/cord 包含前三者
 @babel/preset-env 内置很多规则
 
-###
-let_to_var.ts -> 把代码中的 let声明 变为 var声明
-file_to_var.ts -> 读取文件中的代码(test.js) 将代码中的let声明 变为 var声明 并生成编译后的文件(test.es5.js)
-to_es5.ts -> 使用 `@babel/preset-env` 编译code 打印结果
+### code -> AST -> code2
+1. let_to_var.ts -> 把代码中的 let声明 变为 var声明
+2. file_to_var.ts -> 读取文件中的代码(test.js) 将代码中的let声明 变为 var声明 并生成编译后的文件(test.es5.js)
+3. to_es5.ts -> 使用 `@babel/preset-env` 编译code 打印结果
 
+### 收集依赖(import)
 dep_1.ts -> 读取 `project_1` 项目并收集项目中的依赖(import)
 dep_2.ts -> 读取 `project_2` 项目并递归收集项目中的依赖(import)
 dep_3.ts -> 读取 `project_3` 项目并递归收集项目中的依赖(import)，因为项目中有循环依赖会造成死循环
